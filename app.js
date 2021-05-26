@@ -9,6 +9,23 @@ function show([value1,value2,...rest]){
 
 show(arr)
 
+/*.............add elements to object..............*/
+
+let obj={
+  fruitOne:"apple",
+  fruitTwo:"mango"
+}
+
+
+//to add element to the object by obj.fruitThree method
+obj.fruitThree="graps"
+
+
+//to add element to the object by array method
+obj["fruitFour"]="Kiwi"
+
+console.log(obj)
+
 /*........................*/
 
 var arr=[10,20,30,80,90]
