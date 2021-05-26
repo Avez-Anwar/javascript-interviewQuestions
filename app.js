@@ -347,4 +347,60 @@ var men=new Person("John","Doe",50,"black")
 
 console.log("Name: "+men.name()+ ", Country: "+men.country)
 
+-------------
+
+function Person(first,last,age,eye){
+  this.firstName=first;
+  this.lastName=last;
+  this.age=age;
+  this.eyeColor=eye;
+}
+
+//prototype property
+Person.prototype.country="England"
+
+
+//prototype method
+Person.prototype.name=function(){
+ return this.firstName+""+this.lastName
+}
+
+var men=new Person("John","Doe",50,"black")
+
+console.log("Name: "+men.name()+ ", Country: "+men.country)
+
+
+---------------call,apply and bind method---------
+
+
+let name={
+  firstName:"Akshay",
+  lastName:"Saini",
+}
+
+let name2={
+  firstName:"John",
+  lastName:"Doe"
+}
+  
+let printName=function(homeTown,state){
+  console.log(this.firstName+" something here "+this.lastName+" "+homeTown+" "+state)
+}
+
+//function borrowing
+
+//call method
+printName.call(name,"Mumbai","Maharastra")
+printName.call(name2,"NewDelhi","Delhi")
+
+//apply method
+printName.apply(name,["Mumbai","Pune"])
+printName.apply(name2,["NewDelhi","Delhi"])
+
+//bind method
+
+let printMyName = printName.bind(name2,"Mumbai","Maharastra");
+console.log(printMyName)
+
+printMyName()
 
