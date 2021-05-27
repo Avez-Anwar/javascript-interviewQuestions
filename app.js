@@ -421,3 +421,69 @@ console.log(printMyName)
 
 printMyName()
 
+
+// ----------------html tables---------------
+
+import React from "react";
+import "./Test.css";
+
+function Test() {
+  return (
+    <div className="name">
+      <table>
+        {" "}
+        <caption>Student Marks</caption>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Marks</th>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>Parker</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td>Tony</td>
+          <td>Stark</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>Tony</td>
+          <td>Stark</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>Tony</td>
+          <td>Stark</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>Tony</td>
+          <td>Stark</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>Tony</td>
+          <td>Stark</td>
+          <td>45</td>
+        </tr>
+      </table>
+    </div>
+  );
+}
+
+export default Test;
+
+CSS
+
+table{
+    width: 50% !important;
+}
+
+th{
+    text-align: left;
+}
+
+
+//------------------
